@@ -32,7 +32,6 @@ body {
 }
 
 .menu {
-  height: var(--height-size);
   width: 100%;
   border: var(--border);
   border-radius: var(--border-radius);
@@ -55,13 +54,14 @@ body {
 }
 
 .dropdown-container {
-  position: relative;
+  overflow: hidden;
 }
 
 .dropdown {
-  top: var(--height-size);
-  left: 2rem;
-  position: absolute;
+  display: none;
+  left: 1rem;
+  position: relative;
+  transform: translateY(-100%);
 }
 
 .dropdown-item {
@@ -69,10 +69,6 @@ body {
 }
 
 .menu-opened {
-  transform: translateY(0%);
   display: block;
-}
-
-.menu-closed {
-  transform: calc(translateY(-110%) + var(--height-size));
+  transform: translateY(0%);
 }

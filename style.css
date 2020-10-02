@@ -1,0 +1,78 @@
+:root {
+  --border: solid 1px #eee;
+  --border-radius: 0.2rem;
+  --height-size: 3.8rem;
+  --width-size: 400px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background: #363636;
+  color: #eee;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.container {
+  width: var(--width-size);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 0.8rem 1rem;
+}
+
+.menu {
+  height: var(--height-size);
+  width: 100%;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  margin: 0.5rem 0;
+  padding: 0.8rem 1rem;
+  overflow: hidden;
+}
+
+.toggle {
+  background: #363636;
+  font-size: 1.5rem;
+  color: turquoise;
+  cursor: pointer;
+  transition: background 300ms;
+  border-radius: var(--border-radius);
+}
+
+.toggle:hover {
+  background: #474747;
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown {
+  top: var(--height-size);
+  left: 2rem;
+  position: absolute;
+}
+
+.dropdown-item {
+  display: block;
+}
+
+.menu-opened {
+  transform: translateY(0%);
+  display: block;
+}
+
+.menu-closed {
+  transform: calc(translateY(-110%) + var(--height-size));
+}

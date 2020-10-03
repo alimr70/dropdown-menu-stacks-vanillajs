@@ -24,7 +24,7 @@ body {
   font-size: 1.3rem;
 }
 
-.container {
+#container {
   width: var(--width-size);
   border: var(--border);
   border-radius: var(--border-radius);
@@ -58,17 +58,22 @@ body {
 }
 
 .dropdown {
-  display: none;
-  left: 1rem;
-  position: relative;
-  transform: translateY(-100%);
+  /* position: relative; */
+  /* display: none; */
+  height: 0;
+  padding-left: 1rem;
+  /* transform: translateY(-100%); */
+  transition: all 500ms ease;
 }
 
+
+/* 
 .dropdown-item {
   display: block;
-}
+} */
 
 .menu-opened {
-  display: block;
-  transform: translateY(0%);
+  height: 81px;
+  /* display: block; */
+  /* transform: translateY(0%); */
 }
